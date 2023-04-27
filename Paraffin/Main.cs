@@ -172,6 +172,7 @@
  * 3.70 - Added support for WiX 4 fragments.
  *      - Updated to .NET 4.6.2.
  * 3.71 - Fixed a bug in WiX 4 support.
+ * 3.72 - Fixed a bug in WiX 4 support with update.
  -----------------------------------------------------------------------------*/
 namespace Wintellect.Paraffin
 {
