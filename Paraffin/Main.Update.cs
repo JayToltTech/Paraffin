@@ -622,9 +622,9 @@ namespace Wintellect.Paraffin
         /// True if everything is cool, false if this is a multiple files
         /// per component file.
         /// </returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", 
-                                                         "CA1502:AvoidExcessiveComplexity", 
-                                                         Justification ="Want to keep this processing together for easy readability")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability",
+                                                         "CA1502:AvoidExcessiveComplexity",
+                                                         Justification = "Want to keep this processing together for easy readability")]
         private static Boolean InitializeArgumentsFromFile(String inputXml)
         {
             XElement options = XElement.Parse(inputXml);
@@ -638,7 +638,8 @@ namespace Wintellect.Paraffin
                 ReportIfDifferent = originalArgs.ReportIfDifferent,
                 PatchUpdate = originalArgs.PatchUpdate,
                 FileName = originalArgs.FileName,
-                PatchCreateFiles = originalArgs.PatchCreateFiles
+                PatchCreateFiles = originalArgs.PatchCreateFiles,
+                WiX4 = originalArgs.WiX4
             };
 
             // Look for the version element. If it's missing or 1, it's an old
@@ -759,7 +760,7 @@ namespace Wintellect.Paraffin
             if (permanentValue.Count() == 1)
             {
 
-                argValues.Permanent = Convert.ToBoolean(options.Descendants(PERMANENT).First().Value, 
+                argValues.Permanent = Convert.ToBoolean(options.Descendants(PERMANENT).First().Value,
                                                         CultureInfo.InvariantCulture);
             }
 
